@@ -1,0 +1,503 @@
+/*
+ *
+ * CSS written based on SMACSS architecture.
+ * To learn more, visit: http://smacss.com/
+ * 
+ * For simplicity, no reset or normalize is added. 
+ * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
+ *
+*/
+
+
+/** Import Fonts **/
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100&family=Zen+Dots&display=swap');
+
+
+
+
+/* ---- Base Rules ---- */
+
+
+
+  *, 
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  
+  html {
+      box-sizing: border-box;
+      font-size: 70%;
+  }
+  
+  
+  
+  body{
+      background-image: url("https://images.pexels.com/photos/844297/pexels-photo-844297.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+      background-position: center center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-family: 'Zen Dots', cursive;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height:400px;
+      max-resolution: auto;
+  }
+  
+  input{
+    background-color: #3bb78f;
+    background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+    color: white;
+    font-size: 2.5vw;
+    font-family: 'Raleway', sans-serif;
+    border-radius: 35%;
+    width: 100%;
+    max-width: 75%;
+    margin-top: 0px;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 
+    Styling the labels to display beside the inputs 
+
+*/
+
+
+label {
+    padding: 1rem 1rem 1rem 0;
+    display: inline-block;
+    font-size: 1.5vw;
+    align-items: center;
+    text-align: center;
+    background: -webkit-linear-gradient(#CD5C5C, #FFFFF0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+
+/* Typeography General*/
+
+h1 {
+    font-family: 'Zen Dots', cursive;
+    font-size: 3vw;
+    background: -webkit-linear-gradient(#C71585, #FFE4B5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 0.5rem;
+    padding: 1.5rem 0;
+    text-transform: capitalize;
+}
+
+
+@media only screen and (min-width: 900px) {
+    .holderheadline{
+      font-size: 3vw;
+    }
+  }
+
+
+/* 
+    Style inputs, 
+    select elements 
+    and textareas 
+
+*/
+
+
+input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid ,teal;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+
+
+
+
+/* 
+    Styling the generate button 
+*/
+
+
+
+
+
+
+/* Header Styles */
+
+
+
+
+/* Footer Styles */
+
+.pagefooter{
+  padding: 10em;
+  font-weight: 1000;
+  text-align: center;
+  float: center;
+  background: -webkit-linear-gradient(hotpink, beige);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+.pagefooter p {
+  font-size: 5vw;
+}
+
+
+/* 
+ ***************************
+
+    Responsive Page LayOut
+
+
+  **************************
+*/
+
+
+/* 
+    Styling the pagecontainer 
+*/
+.pagecontainer {
+    border-radius: 15%;
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+    min-height: 100vh;
+    max-width: 80%;
+    opacity: 75%;
+    font-size: 2.5vw;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 10rem;
+    margin-left: 10rem;
+    margin-right: 15rem;
+    box-shadow: 0 10px 15px black;
+    position: sticky;
+    display: flexbox;
+  }
+
+
+/* 
+    Floating columns for container-cols  at 25 percent width 
+*/
+
+
+.container-cols-25 {
+    float: left;
+    width: 25%;
+    margin-top: 5px;
+  }
+  
+
+
+
+  /* Floating column for container-cols at 75 percent width */
+  .container-cols-75 {
+    float: left;
+    width: 75%;
+    margin-top: 5px;
+  }
+  
+
+  /* Clearing the  floats after the columns */
+  .container-rows:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+
+
+
+  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 700px) {
+    .container-cols-25, .container-cols-75, input[type=generate] {
+      max-width: 90%;
+      margin-top: 0;
+    }
+  }
+
+
+
+/* Most Recent Entry Forms */
+
+.form {
+    margin: 0 auto;
+    max-width: 90%;
+    border-radius: 40%;
+    height: 30vh;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    color: #ffffff;
+    opacity: 90%;
+    line-height: 1.5rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #ee8c68;
+    background-image: linear-gradient(315deg, #ee8c68 0%, #eb6b9d 74%);
+}
+
+.form label  {
+    position: absolute;
+    color:silver;
+    font-size: 1.5vw;
+    transition: 0.4s;
+    top: 3rem;
+    left: 3rem;
+    bottom: 0rem;
+    
+}
+
+/* ENTRIES */
+
+#date,
+#temp {
+  padding: 1rem 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  line-height-step: 10%;
+  line-height: 1.0rem;
+  align-items: center;
+  font-size: 1.5vw;
+  
+}
+
+
+/*Inputs */
+
+#zip,
+#feelings {
+  border-radius: 1vw;
+  display: block;
+  font-size: 1.7vw;
+  height: 9vh;
+  text-align: center;
+  float: right;
+  width: 100%;
+  background: -webkit-linear-gradient(#eee, #FFB6C1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.zip {
+  position: relative;
+  width: 100%;
+}
+
+
+
+#zip:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;;
+  -webkit-animation-delay: 1.5s;
+  transition: all 3s ease-in-out 0s;
+}
+
+
+  
+
+
+#zip {
+  padding: 1.7vw 1.3vw;
+  height: 1vh;
+  text-transform: capitalize;
+  width: 100%;
+}
+
+/* Feelings  */
+
+
+#feelings {
+  padding: 5vw;
+  overflow: hidden;
+  resize: none;
+}
+
+.holderfeel {
+  position: relative;
+  width: 100%;
+}
+
+
+.entryHolder{
+    height: 15rem;
+    text-shadow: 0 0.5rem 1.3rem black;
+    align-items: center;
+    display: flex;
+    font-size: 1.5vw;
+    justify-content: space-evenly;
+    padding: 5rem 0;
+
+}
+
+@media only screen and (min-width: 1045px) {
+    .entryHolder {
+      font-size: 1.8vw;
+    }
+  }
+
+  @media only screen and (min-width: 1250px) {
+    .entryHolder{
+      justify-content: center;
+    }
+  }  
+
+
+
+
+
+
+
+#date,
+#temp
+{
+    color: antiquewhite;
+    display: flex;
+    padding: 0 1rem;
+
+}
+
+#content {
+    justify-content: flex-start;
+    flex: 1.7;
+    font-size: 1.7vw;
+
+}
+
+@media only screen and (min-width: 1250px) {
+    .entryHolder {
+      flex: none;
+    }
+  }
+
+
+.title{
+    height: 0.1vh;
+    margin-top: 0px;
+    font-size: 1.5vw;
+}
+
+
+
+/* Text Atea */ 
+
+textarea{
+    background-color: #3bb78f;
+    background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+    color: white;
+    font-size: 3vw;
+    top: 3rem;
+    transition: 0.3s;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 50%;
+    width: 100%;
+    max-width: 75%;
+    margin: 0 auto;
+    border-style: groove;
+    flex-direction: column;
+    display: flex;
+    border-radius: 10%;
+    box-shadow: gray;
+    font-family: 'Raleway', sans-serif;
+}
+
+textarea div {
+    color: white;
+    font-size: 3vw;
+    top: 3rem;
+    transition: 0.3s;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 10%;
+    box-shadow: gray;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/* Generate Button*/
+
+#generate{
+    border-radius: 5rem;
+    height: 4rem;
+    letter-spacing: 0.1rem;
+    opacity: 80%;
+    text-transform: capitalize;
+    text-align: center;
+    background-color: #485461;
+    background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+    color: #ee9617;
+    cursor: pointer;
+    align-items: center;
+    transition: all 0.3s;
+    float: inline-start;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    font-size: 2vw;
+    padding: 15px;
+    font-family: 'Zen Dots', cursive;
+}
+
+#generate:hover{
+    color: White;
+    background-color: #d19592;
+    background-image: linear-gradient(315deg, #d19592 0%, #c81f70 74%);
+
+}
+
+
+
+/* Reset style for HTML element on active to have no border*/
+input:focus ,
+textarea:focus ,
+select:focus,
+button:focus {
+   outline: none;
+}
+
+
+
+/* Style for Placeholder Text*/
+::placeholder { /* Firefox, Chrome, Opera */ 
+    color:white;
+    font-family: 'Raleway', sans-serif;
+
+} 
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+    color:white;
+    font-family: 'Raleway', sans-serif;
+
+} 
+  
+::-ms-input-placeholder { /* Microsoft Edge */ 
+    color:white;
+    font-family: 'Raleway', sans-serif;
+
+} 
+
