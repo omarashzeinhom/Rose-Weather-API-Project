@@ -173,7 +173,7 @@ async function fetchZCDinfo(zipCode) {
                 const date = new Date();
                 console.log(maintemp);
                 console.log(date);                
-                console.log(feelingsElmValue);
+                console.log(feelingsElm.value);
 
                postDateonSrvr(data);
                UpdUi(data);
