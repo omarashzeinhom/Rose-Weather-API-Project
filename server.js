@@ -98,13 +98,13 @@ app.use(express.static('website'));
 ^    & 'serverURLS'
 */
 
+
 app.listen(port,()=>{
     //11.Call back to debugs servermessage and URLS For User to click on urls when server starts
     console.log(servermessage);
     console.log(serverURLS);
    
 });
-
 
 
     //12. Initialize all route with a callback function
@@ -120,17 +120,7 @@ app.listen(port,()=>{
         response.send(projectData).status(200).end();
     });
     
-
-
-
-
-
-
-
-
-
-    
-    
+   
 /*14.
         Post Route Data by 
         URL: http://localhost:49190//postalldata

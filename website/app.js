@@ -1,10 +1,10 @@
 
-/*A. 
+/*1. 
 *    Global Variables 
 */
 
 
-/*B. URLS
+/*2. URLS
     apiUrl to connect 
     local host port 49190
     to openweather api
@@ -18,11 +18,11 @@ const baseUrl = 'https://api.openweathermap.org/data/2.5/weather?zip=';
 const apiUrl = "http://localhost:49190/";
 
 
-/*1. 
+/*3. 
 Personal API Key for OpenWeatherMap API
 */
 
-/*1.1
+/*3.
     A-P-I K-e-y 
     Retrieved from 
     openweathermap
@@ -35,7 +35,7 @@ Personal API Key for OpenWeatherMap API
 const apiKey = '&appid=e567a58a8c8cdff9cdd1aa5b020aff9b&units=metric&lang=en';
 
 
-/*1.2 
+/*4. 
     Date ,Temperature, Content, Feelings  Zip & Code Elements
 */
 
@@ -45,17 +45,23 @@ const tempElm = document.getElementById('temp');
 
 const contentElm = document.getElementById('content');
 
-//Entries
+/*4.    
+    Entries
+
+*/
 
 const zipCodeElm = document.getElementById('zip');
 
 const feelingsElm = document.getElementById('feelings');
 
-// button for event listener 
+/*5. 
+    button for event listener 
+*/
+
 const genButtonElm = document.getElementById('generate');
 
 
-/*1.3
+/*6
     Value of
     Entry 
     Elements for ZipCode & Feelings
@@ -70,7 +76,7 @@ const feelingsElmValue = document.getElementById('feelings').value;
 
 const contentElmValue = document.getElementById('content').value;
 
-/* 1.4
+/* 7
 
     In Case of Errors 
     ------------------------------  
@@ -89,15 +95,15 @@ function getError(error) {
 }
 
 
-/*1.5 
-    Create a new date instance dynamically with JS
+/*8.
+    Created a new date instance dynamically with JS
 */
 let d = new Date();
 let newDate = d.getMonth() + '.' + d.getDate() + '.' + d.getFullYear();
 
 
-/*2.
-    Adding an event listener 
+/*9.
+    Added an event listener 
     to an existing 
     HTML button 
     from DOM using Vanilla JS
@@ -107,7 +113,7 @@ let newDate = d.getMonth() + '.' + d.getDate() + '.' + d.getFullYear();
 genButtonElm.addEventListener('click', whenGenerating);
 
 
-/*3. 
+/*10.
 *   Function 'whenGenerating()'assigned 
 *   to be called by event listener 
 *   Which holds zipcodeElm & feelingselm.
@@ -124,7 +130,11 @@ function whenGenerating() {
     };
 
 
-/* Posting the Data to the Api and retrieve the Zipcode Information*/
+/*11. 
+    Posting the Data to 
+    the Api and retrieve the Zipcode 
+    Information
+*/
 
 fetchZCDinfo(zcdinfo.zipCode).then(() => {
     //Retrieve and show alert if city is not found
@@ -157,7 +167,7 @@ fetchZCDinfo(zcdinfo.zipCode).then(() => {
 */
 
 
-/*4.
+/*12.
     
      Function to GET Web API Data
     
@@ -169,7 +179,6 @@ async function fetchZCDinfo(zipCode) {
         ).then(
             (data) => {
                 const maintemp = data.main.temp;
-                alert(data.main.temp);
                 const date = new Date();
                 console.log(maintemp);
                 console.log(date);                
@@ -185,7 +194,7 @@ async function fetchZCDinfo(zipCode) {
             });
 
 
-/*5. 
+/*13. 
     Function to 
     POST data 
     Post Data 
@@ -223,7 +232,7 @@ async function fetchZCDinfo(zipCode) {
     };
 
 
-/*6.    Update the User Interface
+/*14.    Update the User Interface
         With an UpdatingSeverUI
          Function to GET
          Project Data
@@ -264,7 +273,7 @@ async function UpdUi(data) {
 
 
 
-/*7.
+/*15.
     Set timeout function 
     For 5 minutes 1000ms 
     = 1 seconds

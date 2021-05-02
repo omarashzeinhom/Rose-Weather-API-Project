@@ -68,23 +68,37 @@ URL: http://localhost:49190/postallData
 ###### 4. app.js
 -------------------------------------
 
-1. Personal API Key for OpenWeatherMap API Added
+1. Global Variables 
 
-2. Added const for Date Content  Feelings  Zip Code .Temperature . with Elm
+2. URLS apiUrl to connect local host port 49190 to openweather api
 
-3.  In Case of Errors A  function 'getError()' which console.error when finding errors as an alert.
+3. Personal API Key for OpenWeatherMap API
 
-2. Adding an event listener to an existing HTML button from DOM using Vanilla JS.
+4. Date ,Temperature, Content, Feelings  Zip & Code Elements & Page Entries
 
-3.  Function 'whenGenerating()'assigned  to be called by event listener Which holds zipcodeElm & feelingselm.   
+5. Button genButtonElm 
 
-4. Function fetchZCDinfo which stands for fetch zipcode,content & date to GET Web API Data
+6.  Value of Entry  Elements for ZipCode & Feelings
 
-5. Function postDateonSrvr to POST data
+7. In Case of Errors a function getError has been added to console.error errors found in the page.
+   
 
-6. UpdatingSeverUI Function to GET Project Data 
+8. Created a NeW Date instance dynamically with js
 
-7. Set Time out function to Start after 5 minutes
+9. Added an event listener to an existing HTML button from DOM using Vanilla JS
+
+10. Function 'whenGenerating()'assigned to be called by event listener Which holds zipcodeElm & feelingselm.
+
+11. Posting the Data to the Api and retrieve the Zipcode Information
+
+12. Function fetchZCDinfo to GET Web API Data
+
+13. Function PostDataonserver to POST data & PostDataonserver for saving
+
+14. Update the User InterfaceWith an UpdatingSeverUI Function to GET Project Data
+
+15. Set timeout function For 5,10 & 15minutes 
+1000ms = 1 seconds        
 
 ###### 5. References
 -------------------------------------
