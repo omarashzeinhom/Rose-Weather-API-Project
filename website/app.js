@@ -119,7 +119,7 @@ function whenGenerating() {
     //zcd stands for zipcode content & date 
     let zcdinfo = {
         zipCode: zipCodeElm.value,
-        content: contentElm.value,
+        content: feelingsElm.value,
         date: new Date()
     };
 
@@ -236,10 +236,10 @@ async function fetchZCDinfo(zipCode) {
 async function UpdUi(updatedata) {
         let response = await fetch(`${apiUrl}alldata`)
         try {
-            response.json().then((updatedata) => {{     
+            response.json().then((updatedata) => {{                 
+                contentElm.innerHTML = `The Temperature is: ${document.getElementById('zip').value}`;
                 contentElm.innerHTML = `My Current feelings are: ${feelingsElm.value}`;
                 dateElm.innerHTML = `The Date is: ${new Date()}`;
-                tempElm.innerHTML = `The Temperature is: ${updatedata.main.temp}`;
             };          
             }).catch(getError);
         } catch (error) {

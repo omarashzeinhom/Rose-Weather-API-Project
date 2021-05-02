@@ -144,8 +144,6 @@ app.post('/postalldata',(request, response) => {
             date: new Date(),
             content: request.body.content
         };
-        let data = request.body;
-        console.log(data);
         response.send(projectData).status(200).end();
         console.log(projectData);
     });
