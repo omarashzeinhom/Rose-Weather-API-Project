@@ -208,9 +208,9 @@ async function fetchZCDinfo(zipCode) {
             })  
             });
             try {
-                response.json().then((postinfo) => {
+                response.json().then((data) => {
                     if (response.ok)
-                        UpdUi();
+                        UpdUi(data);
                     else
                         alert('The process has not completed successfuly');
                 }).catch(getError);
@@ -233,13 +233,16 @@ async function fetchZCDinfo(zipCode) {
 
 
 
-async function UpdUi(updatedata) {
+async function UpdUi(data) {
         let response = await fetch(`${apiUrl}alldata`)
+        let temperaturedata = data.main.temp;
         try {
-            response.json().then((updatedata) => {{                 
-                contentElm.innerHTML = `The Temperature is: ${document.getElementById('zip').value}`;
+            response.json().then((data) => {{       
+                
+                tempElm.innerHTML = `The Temperature is:${temperaturedata}`;
                 contentElm.innerHTML = `My Current feelings are: ${feelingsElm.value}`;
                 dateElm.innerHTML = `The Date is: ${new Date()}`;
+                
             };          
             }).catch(getError);
         } catch (error) {
